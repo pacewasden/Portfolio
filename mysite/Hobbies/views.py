@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import hobbies
 # Create your views here.
+
 def index(request):
-    return HttpResponse("This is the Hobbies Page")
+    hobbies_list = hobbies.objects.all()
+    return HttpResponse(hobbies_list)
