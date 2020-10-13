@@ -1,6 +1,30 @@
+{% extends 'hobbies/base.html'%}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{% block body %}
 {% for hobbies in hobbies_list%}
-    <ul>
-       <li>{{hobbies.id}}--{{hobbies.hobbies_name}}</li>
-    </ul>
+    <div class="row">
+        <div class="col-md-3 offset-md-2">
+            <img class="card" height="150px" src="{{hobbies.hobbie_photo}}"/>
+        </div>
+        <div class="col-md-4">
+            <h3>{{hobbies.hobbies_name}}</h3>
+            <h5>{{hobbies.hobbies_type}}</h5>
+        </div>
+        <div class="col-md-2">
+            <a href="#" class="btn btn-success">Details</a>
+        </div>
+    </div>
 {%endfor%}
+{% endblock %}
+</body>
+</html>
 
