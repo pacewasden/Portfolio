@@ -1,13 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h2>This is testing this to see if this works</h2>
-</body>
-</html>
+{% for hobbies in hobbies_list%}
+    <ul>
+       <li>{{hobbies.id}}--{{hobbies.hobbies_name}}</li>
+    </ul>
+{%endfor%}
+
