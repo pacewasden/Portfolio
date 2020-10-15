@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import hobbies
+from .forms import HobbieForm
 from django.template import loader
 
 
@@ -18,3 +19,5 @@ def detail(request, hobbies_id):
         'stuff':stuff
     }
     return render(request, 'hobbies/details.html', context)
+
+def create
